@@ -1,0 +1,6 @@
+# Project exclude paths
+/target/
+.classpath
+.gitattributes
+.project
+.settings/**
