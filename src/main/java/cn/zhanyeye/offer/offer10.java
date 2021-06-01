@@ -1,3 +1,6 @@
+/**
+ * https://leetcode-cn.com/problems/qing-wa-tiao-tai-jie-wen-ti-lcof/
+ */
 class Solution {
     // 简单的动态规划
     public int numWays(int n) {

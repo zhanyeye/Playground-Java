@@ -1,6 +1,8 @@
 import java.util.Deque;
 import java.util.Queue;
-
+/**
+ * https://leetcode-cn.com/problems/dui-lie-de-zui-da-zhi-lcof/
+ */
 class MaxQueue {
     // 维护一个单调的双端队列
     // 如果关注动态变化的最大值：队列中添加一个值后，在它之前比它小的元素都不会对它产生影响
