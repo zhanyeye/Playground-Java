@@ -21,7 +21,7 @@ class Solution29 {
             for (int i = top + 1; i <= bottom; i++) {
                 res[index++] = matrix[i][right];
             }
-            // 第8步：
+            // 第8步：判断矩形是否出现了边为1的情况
             if (top < bottom && left < right) {
                 for (int i = right - 1; i >= left; i--) {
                     res[index++] = matrix[bottom][i];
