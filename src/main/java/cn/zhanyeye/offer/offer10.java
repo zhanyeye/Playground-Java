@@ -1,7 +1,9 @@
+package cn.zhanyeye.offer;
+
 /**
  * https://leetcode-cn.com/problems/qing-wa-tiao-tai-jie-wen-ti-lcof/
  */
-class Solution {
+class Offer10 {
     // 简单的动态规划
     public int numWays(int n) {
         if (n <= 1) return 1;

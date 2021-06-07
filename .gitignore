@@ -4,3 +4,5 @@
 .gitattributes
 .project
 .settings/**
+.idea/
+playground.iml

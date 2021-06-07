@@ -1,4 +1,10 @@
-import cn.zhanyeye.common.TreeNode;
+package cn.zhanyeye.offer;
+
+import cn.zhanyeye.common.*;
+
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * https://leetcode-cn.com/problems/zhong-jian-er-cha-shu-lcof/
  * Definition for a binary tree node.
@@ -9,7 +15,7 @@ import cn.zhanyeye.common.TreeNode;
  *     TreeNode(int x) { val = x; }
  * }
  */
-class Solution {
+class Offer07 {
     // 1. 通过前序遍历，我们知道根节点
     // 2. 根据中序遍历，我们知道左右子树的节点数码
     // 3. 同一颗子树前序遍历和中序遍历长度相同
@@ -30,7 +36,7 @@ class Solution {
     }
 
     public TreeNode mybuildTree(int[] preorder, int preorder_left, int preorder_right, int[] inorder, int inorder_left, int inorder_right) {
-        // 第3步：递归推出条件，说明子节点为null
+        // 第3步：递归退出条件，说明子节点为null
         if (preorder_left > preorder_right) {
             return null;
         }

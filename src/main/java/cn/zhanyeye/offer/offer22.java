@@ -1,3 +1,7 @@
+package cn.zhanyeye.offer;
+
+import cn.zhanyeye.common.ListNode;
+
 /**
  * https://leetcode-cn.com/problems/lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof/
  * Definition for singly-linked list.
@@ -7,10 +11,11 @@
  *     ListNode(int x) { val = x; }
  * }
  */
-class Solution {
+class Offer22 {
     public ListNode getKthFromEnd(ListNode head, int k) {
         ListNode former = head, latter = head;
         for (int i = 0; i < k; i++) {
+            // 最好加一个判空检查
             if (former == null) return null;
             former = former.next;
         }

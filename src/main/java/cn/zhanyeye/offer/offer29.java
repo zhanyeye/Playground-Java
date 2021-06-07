@@ -1,7 +1,9 @@
+package cn.zhanyeye.offer;
+
 /**
  * https://leetcode-cn.com/problems/shun-shi-zhen-da-yin-ju-zhen-lcof/
  */
-class Solution29 {
+class Offer29 {
     public int[] spiralOrder(int[][] matrix) {
         // 第1步：判断一些边界情况
         if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {
@@ -40,5 +42,6 @@ class Solution29 {
             left++;
             right--;
         }
+        return res;
     }
 }

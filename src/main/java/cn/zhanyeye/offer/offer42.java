@@ -1,7 +1,9 @@
+package cn.zhanyeye.offer;
+
 /**
  * https://leetcode-cn.com/problems/lian-xu-zi-shu-zu-de-zui-da-he-lcof/
  */
-class Solution {
+class Offer42 {
     // dp[i]: 表示长度为i的数组的连续子数组的最大和
     // dp[i] = dp[i-1] + nums[i]   dp[i-1] > 0
     // dp[i] = nums[i]             dp[i-1] <= 0

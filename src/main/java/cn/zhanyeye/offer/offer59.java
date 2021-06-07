@@ -1,16 +1,19 @@
+package cn.zhanyeye.offer;
+
 import java.util.Deque;
+import java.util.LinkedList;
 import java.util.Queue;
 /**
  * https://leetcode-cn.com/problems/dui-lie-de-zui-da-zhi-lcof/
  */
-class MaxQueue {
+class Offer59 {
     // 维护一个单调的双端队列
     // 如果关注动态变化的最大值：队列中添加一个值后，在它之前比它小的元素都不会对它产生影响
     // 如果关注动态变化的最小值：队列中添加一个值后，在它之前比它大的元素都不会对它产生影响
     Queue<Integer> queue;
     Deque<Integer> deque;
 
-    public MaxQueue() {
+    public Offer59() {
         queue = new LinkedList();
         deque = new LinkedList();
     }
