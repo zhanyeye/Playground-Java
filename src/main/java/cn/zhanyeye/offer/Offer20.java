@@ -10,7 +10,7 @@ public class Offer20 {
     /**
      * 算法流程：
      * 有限状态自动机
-     * 字符类型：空格[ ]、数字[0-9]、正负号[+-]、小数点、幂符号
+     * 字符类型：空格[ ]、数字[0-9]、正负号[+-]、小数点[.]、幂符号[Ee]
      * 状态定义（按照字符从左到右的顺序，定义以下9钟状态）：
      * 0. 起始的空格
      * 1. 符号位
@@ -26,6 +26,7 @@ public class Offer20 {
      * @return
      */
     public boolean isNumber(String s) {
+        // 状态的集合
         Map[] states = {
                 new HashMap<>() {{ put(' ', 0); put('s', 1); put('d', 2); put('.', 4); }}, // 0 起始的空格
                 new HashMap<>() {{ put('d', 2); put('.', 4); }},                           // 1 符号位
