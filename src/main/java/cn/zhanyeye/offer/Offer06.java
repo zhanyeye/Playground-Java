@@ -3,6 +3,7 @@ package cn.zhanyeye.offer;
 import cn.zhanyeye.common.ListNode;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -30,4 +31,35 @@ public class Offer06 {
         }
         return ans;
     }
+
+    ArrayList<Integer> tmp = new ArrayList<>();
+
+    public int[] reversePrint1(ListNode head) {
+        recur(head);
+        int[] res = new int[tmp.size()];
+        for (int i = 0; i < res.length; i++) {
+            res[i] = tmp.get(i);
+        }
+        return res;
+    }
+
+    public void recur(ListNode head) {
+        if (head == null) return;
+        recur(head.next);
+        tmp.add(head.val);
+    }
+
+    public int[] reversePrint3(ListNode head) {
+        LinkedList<Integer> stack = new LinkedList<>();
+        while (head != null) {
+            stack.addLast(head.val);
+            head = head.next;
+        }
+        int[] res = new int[stack.size()];
+        for (int i = 0; i < res.length; i++) {
+            res[i] = stack.removeLast();
+        }
+        return res;
+    }
+
 }
