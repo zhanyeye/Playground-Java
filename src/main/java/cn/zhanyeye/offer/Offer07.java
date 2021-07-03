@@ -27,15 +27,15 @@ class Offer07 {
         // 第1步：构造哈希表，便于快速定位中序遍历的根节点
         // key-value:节点的值-它所在的位置
         int n = inorder.length;
-        map = new HashMap();
+        map = new HashMap<>();
         for (int i = 0; i < n; i++) {
             map.put(inorder[i], i);
         }
         // 第2步：调用一个递归的去创建根节点的方法
-        return mybuildTree(preorder, 0, n - 1, inorder, 0, n - 1);
+        return myBuildTree(preorder, 0, n - 1, inorder, 0, n - 1);
     }
 
-    public TreeNode mybuildTree(int[] preorder, int preorder_left, int preorder_right, int[] inorder, int inorder_left, int inorder_right) {
+    public TreeNode myBuildTree(int[] preorder, int preorder_left, int preorder_right, int[] inorder, int inorder_left, int inorder_right) {
         // 第3步：递归退出条件，说明子节点为null
         if (preorder_left > preorder_right) {
             return null;
@@ -51,9 +51,9 @@ class Offer07 {
         TreeNode root = new TreeNode(preorder[preorder_left]);
 
         // 第5步：递归的去创建左子树
-        root.left = mybuildTree(preorder, preorder_left + 1, preorder_left + sizeOfLeftSubTree, inorder, inorder_left, inorder_root - 1);
+        root.left = myBuildTree(preorder, preorder_left + 1, preorder_left + sizeOfLeftSubTree, inorder, inorder_left, inorder_root - 1);
         // 第6步：递归的去创建右子树
-        root.right = mybuildTree(preorder, preorder_left + sizeOfLeftSubTree + 1, preorder_right, inorder, inorder_root + 1, inorder_right );
+        root.right = myBuildTree(preorder, preorder_left + sizeOfLeftSubTree + 1, preorder_right, inorder, inorder_root + 1, inorder_right );
 
         return root;
     }

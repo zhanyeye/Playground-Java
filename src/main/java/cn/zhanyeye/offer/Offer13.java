@@ -19,7 +19,7 @@ public class Offer13 {
 
     // 因为不会往回走，所以只用考虑向右，向下两种方向
     public int dfs(int x, int y) {
-        if (x >= m || y >= n || visited[x][y] || isValid(x, y) == false) {
+        if (x >= m || y >= n || visited[x][y] || !isValid(x, y)) {
             return 0;
         }
         visited[x][y] = true;

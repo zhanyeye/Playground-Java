@@ -14,8 +14,8 @@ class Offer59 {
     Deque<Integer> deque;
 
     public Offer59() {
-        queue = new LinkedList();
-        deque = new LinkedList();
+        queue = new LinkedList<>();
+        deque = new LinkedList<>();
     }
     
     public int max_value() {    
