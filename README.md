@@ -1,12 +1,7 @@
 <p align="center">
-   <img width="300" src="https://raw.githubusercontent.com/zhanyeye/Figure-bed/win-pic/img/20210602143944.png">
-</p>
-
-<p align="center">
-   日常刷题 + 小实验  
+   <img width="100" src="https://res.cloudinary.com/anuraghazra/image/upload/v1594908242/logo_ccswme.svg">
+   <h2 align="center">Playground Java</h2>
+   <p align="center">🍒 日常刷题 + 小实验 </p>
 </p>
 
 
-<p align="center">
-   <a href="https://github.com/zhanyeye/Playground/discussions/">笔记</a>
-</p>
